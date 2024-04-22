@@ -16,6 +16,14 @@ public:
         return false;
     }
     bool isPerfectSquare(int num) {
-        return  BinarySearch(0, num, num);
+
+        long int i = 2; 
+        if(num == 1){ 
+            return true; 
+        }
+        while ( i * i < num){ 
+            i*=2; 
+        }
+        return  BinarySearch(i/2, i, num);
     }
 };
